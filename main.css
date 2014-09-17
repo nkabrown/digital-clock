@@ -1,0 +1,21 @@
+body {
+	background-color: #AEC6CF;
+}
+
+section {
+	width: 900px;
+	min-height: 768px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+section p {
+	display: inline-block;
+	font-size: 10em;
+	font-family: 'Bebas Neue','Open Sans', sans-serif;
+	color: #fff;
+}
+
+#secs {
+	font-size: 1em;
+}
