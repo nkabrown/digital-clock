@@ -4,14 +4,34 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="main.css" type="text/css">
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:700' rel='stylesheet' type='text/css'>
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<title>Digital Clock</title>
+	<script>
+		$(document).ready(function() {
+			function currentTime() {
+				var time = new Date();
+				var hour = time.getHours();
+				var mins = time.getMinutes();
+				var secs = time.getSeconds();
+
+				var clock = document.getElementById('clock');
+				clock.innerHTML = "<p>" +hour+ "</p>:<p>" +mins+ "</p><p id='secs'>"+secs+"</p>";
+
+				//setInterval(currentTime, 1000);
+			}
+
+				currentTime();
+
+			$("#secs").css("font-size", "25px");
+		});
+	</script>	
 </head>
 <body>
 	<header>
 	</header>
 	<section>
-		<p>05</p><p>:</p><p>54</p><p id="secs">06</p><p>PM</p>
+		<div id="clock">
+		</div>
 	</section>
 </body>
 </html>

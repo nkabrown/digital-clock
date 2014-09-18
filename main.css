@@ -2,6 +2,11 @@ body {
 	background-color: #AEC6CF;
 }
 
+header {
+	width: 1260px;
+	height: 80px;
+}
+
 section {
 	width: 900px;
 	min-height: 768px;
@@ -9,11 +14,17 @@ section {
 	text-align: center;
 }
 
-section p {
+#clock {
 	display: inline-block;
 	font-size: 10em;
+	font-weight: 100;
 	font-family: 'Bebas Neue','Open Sans', sans-serif;
 	color: #fff;
+	
+}
+
+section p {
+	display: inline-block;
 }
 
 #secs {
