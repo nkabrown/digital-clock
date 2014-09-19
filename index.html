@@ -8,6 +8,8 @@
 	<title>Digital Clock</title>
 	<script>
 		$(document).ready(function() {
+			/*I would like to have an event on pageload that cycles through a varitey of background-colors*/
+
 			function currentTime() {
 				var time = new Date();
 				var hour = time.getHours();
@@ -37,10 +39,11 @@
 				clock.innerHTML = "<p>" +hour+ "</p>:<p>" +mins+ "</p><p id='secs'>"+secs+"</p>"+"<p>"+meridiem+"</p>";
 
 				$("#secs").css("font-size", "25px");
-				setInterval(currentTime, 1000);
+				
 			}
 
 				currentTime();
+				setInterval(currentTime, 1000);
 
 			
 		});
