@@ -13,16 +13,36 @@
 				var hour = time.getHours();
 				var mins = time.getMinutes();
 				var secs = time.getSeconds();
+				var meridiem = "AM";
+				if (hour > 12){
+					hour = hour -12;
+					meridiem = "PM";
+				}
+				if (hour === 0){
+					hours = 12;
+				}
+
+				if(secs < 10){
+					secs = "0" + secs;
+				}
+				if(mins < 10){
+					mins = "0" + mins;
+				}
+
+				if(hour <10){
+					hour = "0" + hour;
+				}
 
 				var clock = document.getElementById('clock');
-				clock.innerHTML = "<p>" +hour+ "</p>:<p>" +mins+ "</p><p id='secs'>"+secs+"</p>";
+				clock.innerHTML = "<p>" +hour+ "</p>:<p>" +mins+ "</p><p id='secs'>"+secs+"</p>"+"<p>"+meridiem+"</p>";
 
-				//setInterval(currentTime, 1000);
+				$("#secs").css("font-size", "25px");
+				setInterval(currentTime, 1000);
 			}
 
 				currentTime();
 
-			$("#secs").css("font-size", "25px");
+			
 		});
 	</script>	
 </head>
